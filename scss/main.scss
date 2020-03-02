@@ -1,0 +1,43 @@
+@import 'variables';
+
+body {
+    background-color: $primary;
+    font-family: 'Raleway';
+}
+
+// styles for top row for contact details and cart
+.contact-details {
+    background-color: $light-yellow;
+
+    .left {
+        color: $secondary;
+        font-weight: 500;
+    }
+
+    .right {
+        .cart {
+            color: $secondary;
+            font-weight: 500;
+        }
+    }
+} 
+
+
+// navbar styles
+
+.navbar {
+    .logo {
+        font-weight: 600;
+        color: $secondary;
+        font-size: 2rem;
+    }
+
+    .link {
+        color: $secondary;
+    }
+    .search-item {
+        .search-icon {
+            color: $secondary;
+        }
+    }
+}

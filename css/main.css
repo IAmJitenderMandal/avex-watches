@@ -1,0 +1,33 @@
+body {
+  background-color: #015668;
+  font-family: 'Raleway';
+}
+
+.contact-details {
+  background-color: #ffd369;
+}
+
+.contact-details .left {
+  color: #263f44;
+  font-weight: 500;
+}
+
+.contact-details .right .cart {
+  color: #263f44;
+  font-weight: 500;
+}
+
+.navbar .logo {
+  font-weight: 600;
+  color: #263f44;
+  font-size: 2rem;
+}
+
+.navbar .link {
+  color: #263f44;
+}
+
+.navbar .search-item .search-icon {
+  color: #263f44;
+}
+/*# sourceMappingURL=main.css.map */
