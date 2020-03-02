@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Avex watch Store</title>
-
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700&display=swap"
         rel="stylesheet">
-
     <!-- bootstrap styles -->
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-
     <!-- custom styles -->
     <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="vendors/css/swiper/swiper.min.css">
     <!-- feather icons script -->
     <script src="https://unpkg.com/feather-icons"></script>
-
 </head>
 
 <body>
@@ -27,7 +23,7 @@
             <div class="contact-details py-1 px-1">
                 <div class="row mx-0">
                     <div class="col-6 col-md-6 d-flex align-items-center left">
-                        <span>Call the Expert:</span> <span class="inline-block ml-1">0938-348394</span>
+                        <span>Call the Expert:</span><span class="inline-block ml-1">0938-348394</span>
                     </div>
                     <div class="col-6 col-md-6 d-flex align-items-center justify-content-end right">
                         <i data-feather="shopping-cart" class="cart" width="20"></i>
@@ -38,12 +34,8 @@
             <!-- navbar markup -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand logo" href="#">Avex Watches</a>
-                <button class="navbar-toggler" 
-                    type="button" 
-                    data-toggle="collapse"
-                    data-target="#navbarSupportedContent" 
-                    aria-controls="navbarSupportedContent" 
-                    aria-expanded="false"
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -72,17 +64,187 @@
                     <i data-feather="search" width='20' class="search-icon"></i>
                 </div>
             </nav>
+
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="img/1st-swiper.jpg" class="w-100" alt="swiper-1st"></div>
+                    <div class="swiper-slide"><img src="img/2nd-swiper.jpg" class="w-100" alt="swiper-2nd"></div>
+                    <div class="swiper-slide"><img src="img/3rd-swiper.jpg" class="w-100" alt="swiper-3rd"></div>
+                    <div class="swiper-slide"><img src="img/4th-swiper.jpg" class="w-100" alt="swiper-4rth"></div>
+
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+            <!-- product section  -->
+            <div class="products-section px-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="filters d-flex justify-content-around py-3">
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Type
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Discount
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Gender
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Price
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    color
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Dial Type
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Band Material
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Shape
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Movement
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Collection
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Sort By
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>                      
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="products">
+                            <div class="row">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
 
 
 
     <!-- jquery script-->
     <script src="js/jquery-3.4.1.min.js"></script>
 
+    <!-- popper js script -->
+    <script src="js/bootstrap/vendor/popper.min.js"></script>
+
     <!-- bootstrap js script -->
     <script src="js/bootstrap/bootstrap.min.js"></script>
+
+
+
+    <!-- swiper js script -->
+    <script src="vendors/js/swiper/swiper.min.js"></script>
+
+    <!-- products data json -->
+    <script src="data/data.json" type="text/javascript"></script>    
 
     <!-- custom js script -->
     <script src="js/script.js"></script>

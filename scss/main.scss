@@ -1,8 +1,16 @@
 @import 'variables';
 
 body {
-    background-color: $primary;
     font-family: 'Raleway';
+
+    .row {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    a, a:link, a:visited{
+        color: $secondary;
+        text-decoration: none;
+    }
 }
 
 // styles for top row for contact details and cart
@@ -24,7 +32,6 @@ body {
 
 
 // navbar styles
-
 .navbar {
     .logo {
         font-weight: 600;
@@ -39,5 +46,21 @@ body {
         .search-icon {
             color: $secondary;
         }
+    }
+}
+
+// slide area styles
+.swiper-container {
+    width: 100%;
+    height: 560px;
+}
+
+
+//products section styles
+.products-section {
+
+    // filters styles
+    .filters {
+        
     }
 }
