@@ -7,7 +7,9 @@ body .row {
   padding-right: 0;
 }
 
-body a, body a:link, body a:visited {
+body a,
+body a:link,
+body a:visited {
   color: #263f44;
   text-decoration: none;
 }
@@ -43,5 +45,35 @@ body a, body a:link, body a:visited {
 .swiper-container {
   width: 100%;
   height: 560px;
+}
+
+.products-section .products {
+  max-width: 80%;
+}
+
+.products-section .products .each-product .product-img {
+  position: relative;
+}
+
+.products-section .products .each-product .product-name {
+  position: relative;
+  font-weight: 600;
+  font-size: .9rem;
+  letter-spacing: 1px;
+}
+
+.products-section .products .each-product .product-price {
+  position: relative;
+  font-weight: 500;
+  font-size: .9rem;
+  letter-spacing: 1px;
+}
+
+.products-section .products .img-loading.active, .products-section .products .price-loading.active, .products-section .products .name-loading.active {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 /*# sourceMappingURL=main.css.map */
