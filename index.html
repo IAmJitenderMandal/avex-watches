@@ -74,7 +74,6 @@
                     <div class="swiper-slide"><img src="img/2nd-swiper.jpg" class="w-100" alt="swiper-2nd"></div>
                     <div class="swiper-slide"><img src="img/3rd-swiper.jpg" class="w-100" alt="swiper-3rd"></div>
                     <div class="swiper-slide"><img src="img/4th-swiper.jpg" class="w-100" alt="swiper-4rth"></div>
-
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -91,126 +90,79 @@
             <div class="products-section px-3">
                 <div class="row">
                     <div class="col-12">
-                        <div class="filters d-flex justify-content-around py-3 my-3">
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Type
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="filters py-3 my-3">
+                            <div class="row">
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="watchType">Type</label>
+                                        <select class="form-control" id="watchType">
+                                           <!-- option will be there through js -->
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Discount
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="gender">Gender</label>
+                                        <select class="form-control" id="gender">
+                                           <!-- option will be there through js -->
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Gender
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="price">price</label>
+                                        <select class="form-control" id="price">
+                                           <!-- option will be there through js -->
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Price
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="color">color</label>
+                                        <select class="form-control" id="color">
+                                            <!-- option will be there through js -->
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    color
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="dialType">Dial Type</label>
+                                        <select class="form-control" id="dialType">
+                                            <!-- option will be there through js -->
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Dial Type
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="materialType">Material</label>
+                                        <select class="form-control" id="materialType">
+                                            <!-- option will be there through js -->
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Band Material
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="shape">Shape</label>
+                                        <select class="form-control" id="shape">
+                                            <!-- option will be there through js -->
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Shape
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="movement">Movement</label>
+                                        <select class="form-control" id="movement">
+                                            <!-- option will be there through js -->
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Movement
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Collection
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div>
-                            <div class="dropdown">
-                                <a href="#" class="dropdown-toggle" type="dropdown" id="dropdownMenuButton"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                    Sort By
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="col-1">
+                                    <div class="form-group">
+                                        <label for="collection">Collection</label>
+                                        <select class="form-control" id="collection">
+                                            <!-- option will be there through js -->
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -223,8 +175,7 @@
                                     <div class="each-product mb-4">
                                         <div class="product-img">
                                             <div class="img-loading active"></div>
-                                            <img src="img/accessory-analog-elegant-fashion-236900.jpg"
-                                                class="w-100 rounded" alt="img">
+                                            <img src="img/accessory-analog-elegant-fashion-236900.jpg" class="w-100 rounded" alt="img">
                                         </div>
                                         <div class="product-name my-1 text-uppercase">
                                             <div class="name-loading active"></div>
