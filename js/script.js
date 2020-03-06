@@ -50,9 +50,9 @@ getProducts(function (err, data) {
     if (err) {
         console.log(err);
     } else if (data) {
-        
+
         // select all filter elements from document
-        var filters = document.querySelectorAll('#watchType , #gender, #price, #color, #dialType, #materialType, #shape, #movement, #collection');
+        var filters = document.querySelectorAll('#watchType , #gender, #max-price, #min-price, #color, #dialType, #materialType, #shape, #movement, #collection');
         // converting nodlist to an array
         filters = Array.from(filters);
         console.log(filters);
@@ -62,16 +62,16 @@ getProducts(function (err, data) {
 
             // filter id
             var filterID = filters[i].id;
-            
+
             // puting each filter related value in an array
             data.forEach(function (eachDataObj) {
-                filterVals.includes(eachDataObj[filterID]) ? null : filterVals.push(eachDataObj[filterID]);  
+                filterVals.includes(eachDataObj[filterID]) ? null : filterVals.push(eachDataObj[filterID]);
             })
 
             //now settiing dynamically all those option in filters according to the options we have in our data
-            filterVals.forEach(function(filterval) {
+            filterVals.forEach(function (filterval) {
                 for (var i = 0; i < filters.length; i++) {
-                    if (filters[i].id === filterID) {
+                    if (filters[i].id === filterID && filterID !== 'price') {
                         filters[i].innerHTML += '<option value=' + filterval + '>' + filterval + '</option>';
                     }
                 }
@@ -79,22 +79,58 @@ getProducts(function (err, data) {
             // making filtervals empty again so it would not have old data again
             filterVals = [];
         }
-      
-        // show data on page
-        var products = document.querySelectorAll('.each-product');
-        products = Array.from(products);
-      
-        products.forEach(function (product, index) {
-            // removing loading status
-            if (product.querySelector('.img-loading') && product.querySelector('.name-loading') && product.querySelector('.price-loading')) {
-                product.querySelector('.img-loading').classList.remove('active')
-                product.querySelector('.name-loading').classList.remove('active')
-                product.querySelector('.price-loading').classList.remove('active')
-            }
 
-            // inserting data to html elements
-            product.querySelector('.product-img img').setAttribute('src', 'img/' + data[index].img);
-            product.querySelector('.product-name').textContent = data[index].name;
-        });
+        // setup event listener on filter elements
+        document.querySelector('.filters').addEventListener('change', filterization);
+
+        // making copy of original data
+        var modiefiedData = data.slice();
+
+        function filterization() {
+            // variables to store filters value
+            var watchType = document.querySelector('#watchType').value,
+                gender = document.querySelector('#gender').value,
+                minPrice = document.querySelector('#min-price').value === '' ? 0 : document.querySelector('#min-price').value,
+                maxPrice = document.querySelector('#max-price').value === '' ? 200000 : document.querySelector('#max-price').value,
+                color = document.querySelector('#color').value,
+                dialType = document.querySelector('#dialType').value,
+                material = document.querySelector('#materialType').value,
+                shape = document.querySelector('#shape').value,
+                movement = document.querySelector('#movement').value,
+                collection = document.querySelector('#collection').value;
+
+            if (watchType !== 'all') {
+                modiefiedData = data.filter(function (el) {
+                    return el.watchType === watchType;
+                })
+            } else if (watchType === 'all') {
+                showProducts(modiefiedData);
+            }
+            //invoking showProducts for filterd data
+            showProducts(modiefiedData)
+        }
+
+        console.log(modiefiedData)
+        // show data on page
+        function showProducts(dataToShow) {
+            var products = document.querySelectorAll('.each-product');
+            products = Array.from(products);
+
+            products.forEach(function (product, index) {
+                // removing loading status
+                if (product.querySelector('.img-loading') && product.querySelector('.name-loading') && product.querySelector('.price-loading')) {
+                    product.querySelector('.img-loading').classList.remove('active')
+                    product.querySelector('.name-loading').classList.remove('active')
+                    product.querySelector('.price-loading').classList.remove('active')
+                }
+
+                console.log(index)
+
+                // inserting data to html elements
+                product.querySelector('.product-img img').setAttribute('src', 'img/' + dataToShow[index].img);
+                product.querySelector('.product-name').textContent = dataToShow[index].name;
+            });
+        }
+        showProducts(modiefiedData);
     }
 });

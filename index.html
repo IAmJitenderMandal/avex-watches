@@ -90,77 +90,89 @@
             <div class="products-section px-3">
                 <div class="row">
                     <div class="col-12">
-                        <div class="filters py-3 my-3">
-                            <div class="row">
-                                <div class="col-1">
+                        <div class="filters px-3 py-3 my-3">
+                            <div class="row justify-content-between">
+                                <div class="col-1 px-1">
                                     <div class="form-group">
                                         <label for="watchType">Type</label>
                                         <select class="form-control" id="watchType">
-                                           <!-- option will be there through js -->
+                                            <option value="all">All</option>
+                                           <!-- other option will be there through js -->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-1 px-1">
                                     <div class="form-group">
                                         <label for="gender">Gender</label>
                                         <select class="form-control" id="gender">
-                                           <!-- option will be there through js -->
+                                            <option value="all">All</option>
+                                           <!-- other option will be there through js -->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-1 px-1">
                                     <div class="form-group">
-                                        <label for="price">price</label>
-                                        <select class="form-control" id="price">
-                                           <!-- option will be there through js -->
-                                        </select>
+                                        <label for="min-Price">Min-Price</label>
+                                        <input type="text" placeholder="1000" class="form-control" id="min-price">
                                     </div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-1 px-1">
+                                    <div class="form-group">
+                                        <label for="max-price">Max-Price</label>
+                                        <input type="text" placeholder="75000" class="form-control" id="max-price">
+                                    </div>
+                                </div>
+                                <div class="col-1 px-1">
                                     <div class="form-group">
                                         <label for="color">color</label>
                                         <select class="form-control" id="color">
-                                            <!-- option will be there through js -->
+                                            <option value="all">All</option>
+                                            <!-- other option will be there through js -->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-1 px-1">
                                     <div class="form-group">
                                         <label for="dialType">Dial Type</label>
                                         <select class="form-control" id="dialType">
-                                            <!-- option will be there through js -->
+                                            <option value="all">All</option>
+                                            <!-- other option will be there through js -->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-1 px-1">
                                     <div class="form-group">
                                         <label for="materialType">Material</label>
                                         <select class="form-control" id="materialType">
-                                            <!-- option will be there through js -->
+                                            <option value="all">All</option>
+                                            <!-- other option will be there through js -->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-1 px-1">
                                     <div class="form-group">
                                         <label for="shape">Shape</label>
                                         <select class="form-control" id="shape">
-                                            <!-- option will be there through js -->
+                                            <option value="all">All</option>
+                                            <!-- other option will be there through js -->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-1 px-1">
                                     <div class="form-group">
                                         <label for="movement">Movement</label>
                                         <select class="form-control" id="movement">
-                                            <!-- option will be there through js -->
+                                            <option value="all">All</option>
+                                            <!-- other option will be there through js -->
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-1">
+                                <div class="col-1 px-1">
                                     <div class="form-group">
                                         <label for="collection">Collection</label>
                                         <select class="form-control" id="collection">
-                                            <!-- option will be there through js -->
+                                            <option value="all">All</option>
+                                            <!-- other option will be there through js -->
                                         </select>
                                     </div>
                                 </div>
@@ -170,7 +182,7 @@
                     <div class="col-12">
                         <!-- products markup -->
                         <div class="products mx-auto">
-                            <div class="row">
+                            <div class="row ">
                                 <div class="col-12 col-md-6 col-lg-3">
                                     <div class="each-product mb-4">
                                         <div class="product-img">

@@ -11,7 +11,7 @@
         "materialType": "leather",
         "shape": "round",
         "movement": "ronda",
-        "collection": "wedding"
+        "collection": "business"
     },
     {
         "name": "Citizen",
@@ -22,10 +22,10 @@
         "price": "12500",
         "color": "silver",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "rubber",
         "shape": "round",
-        "movement": "ronda",
-        "collection": "wedding"
+        "movement": "smart",
+        "collection": "business"
     },
     {
         "name": "Citizen",
@@ -38,8 +38,8 @@
         "dialType": "analog",
         "materialType": "leather",
         "shape": "round",
-        "movement": "ronda",
-        "collection": "wedding"
+        "movement": "Smart",
+        "collection": "business"
     },
     {
         "name": "Favre Leuba",
@@ -50,10 +50,10 @@
         "price": "15400",
         "color": "black",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "smart",
         "shape": "round",
-        "movement": "ronda",
-        "collection": "wedding"
+        "movement": "smart",
+        "collection": "party"
     },
     {
         "name": "Favre Leuba",
@@ -78,7 +78,7 @@
         "price": "23000",
         "color": "black",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "metal",
         "shape": "round",
         "movement": "ronda",
         "collection": "wedding"
@@ -91,11 +91,11 @@
         "gender": "unisex",
         "price": "14500",
         "color": "black",
-        "dialType": "analog",
-        "materialType": "leather",
+        "dialType": "digital",
+        "materialType": "rubber",
         "shape": "round",
         "movement": "ronda",
-        "collection": "wedding"
+        "collection": "party"
     },
     {
         "name": "Frederique Constant",
@@ -105,22 +105,22 @@
         "gender": "unisex",
         "price": "14500",
         "color": "silver",
-        "dialType": "analog",
-        "materialType": "leather",
-        "shape": "round",
+        "dialType": "digital",
+        "materialType": "rubber",
+        "shape": "square",
         "movement": "ronda",
         "collection": "wedding"
     },
     {
         "name": "Frederique Constant",
-        "img": "analog-watch-blur-classic-close-up-236915.jpg",
+        "img": "rosegold-casio.jpg",
         "watchType": "smartwatch",
         "discount": 15,
         "gender": "unisex",
         "price": "15300",
         "color": "brown",
-        "dialType": "analog",
-        "materialType": "leather",
+        "dialType": "digital",
+        "materialType": "rubber",
         "shape": "round",
         "movement": "ronda",
         "collection": "wedding"
@@ -133,8 +133,8 @@
         "gender": "male",
         "price": "19700",
         "color": "black",
-        "dialType": "analog",
-        "materialType": "leather",
+        "dialType": "digital",
+        "materialType": "metal",
         "shape": "round",
         "movement": "ronda",
         "collection": "wedding"
@@ -147,9 +147,9 @@
         "gender": "male",
         "price": "17800",
         "color": "golden",
-        "dialType": "analog",
-        "materialType": "leather",
-        "shape": "round",
+        "dialType": "digital",
+        "materialType": "metal",
+        "shape": "square",
         "movement": "ronda",
         "collection": "wedding"
     },
@@ -162,9 +162,9 @@
         "price": "18800",
         "color": "silver",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "metal",
         "shape": "round",
-        "movement": "ronda",
+        "movement": "hand-wind",
         "collection": "wedding"
     },
     {
@@ -176,9 +176,9 @@
         "price": "19500",
         "color": "black",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "metal",
         "shape": "round",
-        "movement": "ronda",
+        "movement": "hand-wind",
         "collection": "wedding"
     },
     {
@@ -190,9 +190,9 @@
         "price": "5000",
         "color": "black",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "ceramic",
         "shape": "round",
-        "movement": "ronda",
+        "movement": "hand-wind",
         "collection": "wedding"
     },
     {
@@ -204,9 +204,9 @@
         "price": "22700",
         "color": "black",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "ceramic",
         "shape": "round",
-        "movement": "ronda",
+        "movement": "Epson",
         "collection": "wedding"
     },
     {
@@ -218,9 +218,9 @@
         "price": "17500",
         "color": "black",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "ceramic",
         "shape": "round",
-        "movement": "ronda",
+        "movement": "Epson",
         "collection": "wedding"
     },
     {
@@ -231,10 +231,10 @@
         "gender": "female",
         "price": "7000",
         "color": "silver",
-        "dialType": "analog",
+        "dialType": "digital",
         "materialType": "leather",
         "shape": "round",
-        "movement": "ronda",
+        "movement": "Epson",
         "collection": "wedding"
     },
     {
@@ -245,11 +245,11 @@
         "gender": "male",
         "price": "8000",
         "color": "black",
-        "dialType": "analog",
+        "dialType": "digital",
         "materialType": "leather",
         "shape": "round",
         "movement": "ronda",
-        "collection": "wedding"
+        "collection": "sports"
     },
     {
         "name": "Raymond Weil",
@@ -263,7 +263,7 @@
         "materialType": "leather",
         "shape": "round",
         "movement": "ronda",
-        "collection": "wedding"
+        "collection": "sports"
     },
     {
         "name": "Raymond Weil",
@@ -274,10 +274,10 @@
         "price": "12500",
         "color": "black",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "silicon",
         "shape": "round",
-        "movement": "ronda",
-        "collection": "wedding"
+        "movement": "Kinetic",
+        "collection": "sports"
     },
     {
         "name": "Raymond Weil",
@@ -288,10 +288,10 @@
         "price": "14700",
         "color": "black",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "silicon",
         "shape": "round",
-        "movement": "ronda",
-        "collection": "wedding"
+        "movement": "Mivota",
+        "collection": "sports"
     },
     {
         "name": "Tommy Hilfigher",
@@ -302,10 +302,10 @@
         "price": "25500",
         "color": "black",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "silicon",
         "shape": "round",
-        "movement": "ronda",
-        "collection": "wedding"
+        "movement": "Mivota",
+        "collection": "sports"
     },
     {
         "name": "TAG Heuer",
@@ -316,10 +316,10 @@
         "price": "47700",
         "color": "golden",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "silicon",
         "shape": "round",
-        "movement": "ronda",
-        "collection": "wedding"
+        "movement": "Mivota",
+        "collection": "sports"
     },
     {
         "name": "Swarovski",
@@ -330,10 +330,10 @@
         "price": "10000",
         "color": "golden",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "silicon",
         "shape": "round",
-        "movement": "ronda",
-        "collection": "wedding"
+        "movement": "Mivota",
+        "collection": "sports"
     },
     {
         "name": "Tommy Hilfigher",
@@ -347,7 +347,7 @@
         "materialType": "leather",
         "shape": "round",
         "movement": "ronda",
-        "collection": "wedding"
+        "collection": "sports"
     },
     {
         "name": "Versace",
@@ -361,7 +361,7 @@
         "materialType": "leather",
         "shape": "round",
         "movement": "ronda",
-        "collection": "wedding"
+        "collection": "sports"
     },
     {
         "name": "Versace",
@@ -372,24 +372,24 @@
         "price": "55000",
         "color": "rose-gold",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "other",
         "shape": "round",
         "movement": "ronda",
-        "collection": "wedding"
+        "collection": "sports"
     },
     {
         "name": "Tommy Hilfigher",
-        "img": "round-gold-colored-analog-watch-with-black-leather-strap-at-1120275.jpg",
+        "img": "round-gold-color.jpg",
         "watchType": "watch",
         "discount": 22,
         "gender": "male",
         "price": "16000",
         "color": "golden",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "other",
         "shape": "round",
         "movement": "ronda",
-        "collection": "wedding"
+        "collection": "sports"
     },
     {
         "name": "Anne Klein",
@@ -400,10 +400,10 @@
         "price": "19000",
         "color": "white",
         "dialType": "analog",
-        "materialType": "leather",
+        "materialType": "other",
         "shape": "round",
         "movement": "ronda",
-        "collection": "wedding"
+        "collection": "sports"
     },
     {
         "name": "Armani Exchange",
