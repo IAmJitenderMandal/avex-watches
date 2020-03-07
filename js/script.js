@@ -53,9 +53,9 @@ getProducts(function (err, data) {
 
         // select all filter elements from document
         var filters = document.querySelectorAll('#watchType , #gender, #max-price, #min-price, #color, #dialType, #materialType, #shape, #movement, #collection');
+
         // converting nodlist to an array
         filters = Array.from(filters);
-        console.log(filters);
 
         var filterVals = [];
         for (var i = 0; i < filters.length; i++) {
@@ -80,57 +80,25 @@ getProducts(function (err, data) {
             filterVals = [];
         }
 
-        // setup event listener on filter elements
-        document.querySelector('.filters').addEventListener('change', filterization);
-
-        // making copy of original data
-        var modiefiedData = data.slice();
-
-        function filterization() {
-            // variables to store filters value
-            var watchType = document.querySelector('#watchType').value,
-                gender = document.querySelector('#gender').value,
-                minPrice = document.querySelector('#min-price').value === '' ? 0 : document.querySelector('#min-price').value,
-                maxPrice = document.querySelector('#max-price').value === '' ? 200000 : document.querySelector('#max-price').value,
-                color = document.querySelector('#color').value,
-                dialType = document.querySelector('#dialType').value,
-                material = document.querySelector('#materialType').value,
-                shape = document.querySelector('#shape').value,
-                movement = document.querySelector('#movement').value,
-                collection = document.querySelector('#collection').value;
-
-            if (watchType !== 'all') {
-                modiefiedData = data.filter(function (el) {
-                    return el.watchType === watchType;
-                })
-            } else if (watchType === 'all') {
-                showProducts(modiefiedData);
-            }
-            //invoking showProducts for filterd data
-            showProducts(modiefiedData)
-        }
-
-        console.log(modiefiedData)
         // show data on page
         function showProducts(dataToShow) {
-            var products = document.querySelectorAll('.each-product');
-            products = Array.from(products);
+            // product html to append
+            htmlToappend = '<div class="col-12 col-md-6 col-lg-3"><div class="each-product mb-4"><div class="product-img"><img src="img/%imgPath%" class="w-100 rounded" alt="img"></div><div class="product-name my-1 text-uppercase">%productName%</div> <div class="product-price">%price%</div></div></div>';
+            
+            // container for product listing
+            var productContainer = document.querySelector('.products-listing');
+            // replaced html variable
+            var replacedHTML;
 
-            products.forEach(function (product, index) {
-                // removing loading status
-                if (product.querySelector('.img-loading') && product.querySelector('.name-loading') && product.querySelector('.price-loading')) {
-                    product.querySelector('.img-loading').classList.remove('active')
-                    product.querySelector('.name-loading').classList.remove('active')
-                    product.querySelector('.price-loading').classList.remove('active')
-                }
+            dataToShow.forEach(function (product) {
+                replacedHTML = htmlToappend.replace('%imgPath%', product.img);
+                replacedHTML = replacedHTML.replace('%productName%', product.name);
+                replacedHTML = replacedHTML.replace('%price%', 'Rs ' + product.price);
 
-                console.log(index)
-
-                // inserting data to html elements
-                product.querySelector('.product-img img').setAttribute('src', 'img/' + dataToShow[index].img);
-                product.querySelector('.product-name').textContent = dataToShow[index].name;
+                productContainer.insertAdjacentHTML('afterbegin', replacedHTML);
+                
             });
-        }
-        showProducts(modiefiedData);
+        
+        }  showProducts(data);
     }
 });
