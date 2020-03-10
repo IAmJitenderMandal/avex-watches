@@ -1,6 +1,3 @@
-// feather icon usage
-feather.replace();
-
 // swiper initialization
 var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
@@ -153,13 +150,20 @@ getProducts(function (err, data) {
             }
         }
 
+        // container for product listing
+        var productContainer = document.querySelector('.products-listing');
+
+        // adding event for mouse over
+        productContainer.addEventListener('mouseover', function (event) {
+            if (event.target.parentElement.classList.contains('product-img')) {
+                
+            }
+        })
         // show data on page
         function showProducts(dataToShow) {
             // product html to append
-            htmlToappend = '<div class="col-12 col-md-6 col-lg-3"><div class="each-product mb-4"><div class="product-img"><img src="img/%imgPath%" class="w-100 rounded" alt="img"></div><div class="product-name my-1 text-uppercase">%productName%</div> <div class="product-price">%price%</div></div></div>';
-
-            // container for product listing
-            var productContainer = document.querySelector('.products-listing');
+            htmlToappend = '<div class="col-12 col-md-6 col-lg-3"><div class="each-product mb-4"><div class="product-img"><div class="overlay-img d-flex justify-content-center align-items-center"><a href="#" class="btn overlay-btn mr-2"><img src="../img/icons/eye.svg" width="30"></a> <a href="#" class="btn overlay-btn ml-2"><img src="../img/icons/shopping-cart.svg" width="30"></a></div><img src="img/%imgPath%" class="w-100 rounded" alt="img"></div><div class="product-name my-1 text-uppercase">%productName%</div> <div class="product-price">%price%</div></div></div>';
+            
             // replaced html variable
             var replacedHTML;
             // making product container html element empty before inserting new html
@@ -170,13 +174,16 @@ getProducts(function (err, data) {
                     replacedHTML = htmlToappend.replace('%imgPath%', product.img);
                     replacedHTML = replacedHTML.replace('%productName%', product.name);
                     replacedHTML = replacedHTML.replace('%price%', 'rs ' + product.price);
-    
+
                     productContainer.insertAdjacentHTML('afterbegin', replacedHTML);
                 });
             } else {
-                productContainer.innerHTML = 'sorry no data found';
+                productContainer.innerHTML = '<p class="text-center">sorry no data found</p>';
             }
         }
         showProducts(dataToFilter);
     }
 });
+
+// feather icon usage
+feather.replace();

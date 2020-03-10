@@ -55,6 +55,26 @@ body a:visited {
   position: relative;
 }
 
+.products-section .products .each-product .overlay-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #015668;
+  background: linear-gradient(93deg, rgba(1, 86, 104, 0.896796) 0%, rgba(1, 86, 104, 0.860382) 100%);
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+  opacity: 0;
+}
+
+.products-section .products .each-product .overlay-img .overlay-btn {
+  background-color: #ffd369;
+  color: #ffffff;
+}
+
+.products-section .products .each-product .overlay-img:hover {
+  opacity: 1;
+}
+
 .products-section .products .each-product .product-name {
   position: relative;
   font-weight: 600;
@@ -69,7 +89,9 @@ body a:visited {
   letter-spacing: 1px;
 }
 
-.products-section .products .img-loading.active, .products-section .products .price-loading.active, .products-section .products .name-loading.active {
+.products-section .products .img-loading.active,
+.products-section .products .price-loading.active,
+.products-section .products .name-loading.active {
   position: absolute;
   background-color: black;
   width: 100%;
