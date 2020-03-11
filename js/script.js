@@ -153,17 +153,11 @@ getProducts(function (err, data) {
         // container for product listing
         var productContainer = document.querySelector('.products-listing');
 
-        // adding event for mouse over
-        productContainer.addEventListener('mouseover', function (event) {
-            if (event.target.parentElement.classList.contains('product-img')) {
-                
-            }
-        })
         // show data on page
         function showProducts(dataToShow) {
             // product html to append
-            htmlToappend = '<div class="col-12 col-md-6 col-lg-3"><div class="each-product mb-4"><div class="product-img"><div class="overlay-img d-flex justify-content-center align-items-center"><a href="#" class="btn overlay-btn mr-2"><img src="../img/icons/eye.svg" width="30"></a> <a href="#" class="btn overlay-btn ml-2"><img src="../img/icons/shopping-cart.svg" width="30"></a></div><img src="img/%imgPath%" class="w-100 rounded" alt="img"></div><div class="product-name my-1 text-uppercase">%productName%</div> <div class="product-price">%price%</div></div></div>';
-            
+            htmlToappend = '<div class="col-12 col-md-6 col-lg-3"><div class="each-product mb-4" id="%product-id%"><div class="product-img"><div class="overlay-img d-flex justify-content-center align-items-center"><a href="javascript:void(0)" class="btn overlay-btn view-item mr-2"><img src="../img/icons/eye.svg" width="30"></a> <a href="javascript:void(0)" class="btn overlay-btn add-cart ml-2"><img src="../img/icons/shopping-cart.svg" class="add-cart-icon" width="30"></a></div><img src="img/%imgPath%" class="w-100 rounded" alt="img"></div><div class="product-name my-1 text-uppercase">%productName%</div><div class="product-price">%price%</div></div></div>';
+
             // replaced html variable
             var replacedHTML;
             // making product container html element empty before inserting new html
@@ -171,7 +165,8 @@ getProducts(function (err, data) {
 
             if (dataToShow.length > 0) {
                 dataToShow.forEach(function (product) {
-                    replacedHTML = htmlToappend.replace('%imgPath%', product.img);
+                    replacedHTML = htmlToappend.replace('%product-id%', product.id);
+                    replacedHTML = replacedHTML.replace('%imgPath%', product.img);
                     replacedHTML = replacedHTML.replace('%productName%', product.name);
                     replacedHTML = replacedHTML.replace('%price%', 'rs ' + product.price);
 
@@ -182,6 +177,40 @@ getProducts(function (err, data) {
             }
         }
         showProducts(dataToFilter);
+
+        // setting event listener for products to add into cart 
+        var cartProducts = [];
+        productContainer.addEventListener('click', function (event) {
+            if (event.target.classList.contains('add-cart') || event.target.parentElement.classList.contains('add-cart')) {
+                var productID = event.target.classList.contains('add-cart-icon') ? event.target.parentElement.parentElement.parentElement.parentElement.id : event.target.parentElement.parentElement.parentElement.id;
+
+                // filtering product from database for cart
+                cartProducts.push(data.find(function (el) {
+                    return el.id === parseInt(productID);
+                }))
+                // invoking handlecart with array of products 
+                handleCart(cartProducts);
+            }
+        })
+
+        // add data to cart
+        function handleCart(cartData) {
+            var cartItemsContainer = document.querySelector('.cart-container .cart-items');
+            var itemToAdd = '<li class="list-group-item"><div class="item d-flex justify-content-between"><div class="item-img"><img src="img/%img-path%" alt="item-img" width="40"></div><div class="item-name text-left text-truncate">%item-name%</div><div class="item-price text-left text-muted">%item-price%</div><div class="each-item-numbers w-50"><select><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="5+">5+</option></select></div></div></li>';
+
+            cartItemsContainer.innerHTML = '';
+            cartData.forEach(function (eachData) {
+                var item = itemToAdd.replace('%img-path%', eachData.img);
+                item = item.replace('%item-name%', eachData.name);
+                item = item.replace('%item-price%', eachData.price);
+                cartItemsContainer.innerHTML += item;
+            })
+        }
+
+        // show cart items
+        document.querySelector('.cart').addEventListener('click', function () {
+            document.querySelector('.cart-container').classList.toggle('active');
+        })
     }
 });
 

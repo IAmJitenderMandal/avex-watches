@@ -26,13 +26,31 @@ body {
     }
 
     .right {
+        position: relative;
         .cart {
             color: $secondary;
             font-weight: 500;
+            cursor: pointer;
+        }
+
+        .cart-container {
+            width: 30rem;
+            position: absolute;
+            top: 18px;
+            opacity: 0;
+            transition: 0.5s opacity;
+            
+            .each-item-numbers {
+                width: 54px !important;
+            }
+
+            &.active {
+                opacity: 1;
+                z-index: 20;
+            }
         }
     }
 }
-
 
 // navbar styles
 .navbar {
@@ -91,8 +109,6 @@ body {
                 }
             }
 
-
-
             .product-name {
                 position: relative;
                 font-weight: 600;
@@ -108,7 +124,6 @@ body {
             }
         }
 
-
         .img-loading.active,
         .price-loading.active,
         .name-loading.active {
@@ -118,6 +133,5 @@ body {
             height: 100%;
             z-index: 10;
         }
-
     }
 }

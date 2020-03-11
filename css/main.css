@@ -23,9 +23,32 @@ body a:visited {
   font-weight: 500;
 }
 
+.contact-details .right {
+  position: relative;
+}
+
 .contact-details .right .cart {
   color: #263f44;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.contact-details .right .cart-container {
+  width: 30rem;
+  position: absolute;
+  top: 18px;
+  opacity: 0;
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+}
+
+.contact-details .right .cart-container .each-item-numbers {
+  width: 110px !important;
+}
+
+.contact-details .right .cart-container.active {
+  opacity: 1;
+  z-index: 20;
 }
 
 .navbar .logo {
