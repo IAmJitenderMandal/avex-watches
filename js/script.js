@@ -156,7 +156,7 @@ getProducts(function (err, data) {
         // show data on page
         function showProducts(dataToShow) {
             // product html to append
-            htmlToappend = '<div class="col-12 col-md-6 col-lg-3"><div class="each-product mb-4" id="%product-id%"><div class="product-img"><div class="overlay-img d-flex justify-content-center align-items-center"><a href="javascript:void(0)" class="btn overlay-btn view-item mr-2"><img src="../img/icons/eye.svg" width="30"></a> <a href="javascript:void(0)" class="btn overlay-btn add-cart ml-2"><img src="../img/icons/shopping-cart.svg" class="add-cart-icon" width="30"></a></div><img src="img/%imgPath%" class="w-100 rounded" alt="img"></div><div class="product-name my-1 text-uppercase">%productName%</div><div class="product-price">%price%</div></div></div>';
+            htmlToappend = '<div class="col-12 col-md-6 col-lg-3"><div class="each-product mb-4" id="%product-id%"><div class="product-img"><div class="overlay-img d-flex justify-content-center align-items-center"><img src="../img/icons/eye.svg" class="view-item rounded px-2 py-1 mr-1 overlay-btn" width="40"><img src="../img/icons/shopping-cart.svg" class="overlay-btn rounded px-2 py-1 ml-1 add-cart" width="40"></div><img src="img/%imgPath%" class="w-100 rounded" alt="img"></div><div class="product-name my-1 text-uppercase">%productName%</div><div class="product-price">%price%</div></div></div>';
 
             // replaced html variable
             var replacedHTML;
@@ -180,18 +180,27 @@ getProducts(function (err, data) {
 
         // setting event listener for products to add into cart 
         var cartProducts = [];
-        productContainer.addEventListener('click', function (event) {
-            if (event.target.classList.contains('add-cart') || event.target.parentElement.classList.contains('add-cart')) {
-                var productID = event.target.classList.contains('add-cart-icon') ? event.target.parentElement.parentElement.parentElement.parentElement.id : event.target.parentElement.parentElement.parentElement.id;
+
+        productContainer.addEventListener('click', addCart);
+
+        function addCart(event) {
+            if (event.target.classList.contains('add-cart')) {
+                var productID = event.target.parentElement.parentElement.parentElement.id;
 
                 // filtering product from database for cart
                 cartProducts.push(data.find(function (el) {
                     return el.id === parseInt(productID);
                 }))
+                console.log(cartProducts)
                 // invoking handlecart with array of products 
                 handleCart(cartProducts);
+
+                event.target.classList.remove('add-cart');
+                event.target.classList.add('item-added');
+
             }
-        })
+                        
+        }
 
         // add data to cart
         function handleCart(cartData) {

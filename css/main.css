@@ -43,7 +43,7 @@ body a:visited {
 }
 
 .contact-details .right .cart-container .each-item-numbers {
-  width: 110px !important;
+  width: 54px !important;
 }
 
 .contact-details .right .cart-container.active {
@@ -92,6 +92,7 @@ body a:visited {
 .products-section .products .each-product .overlay-img .overlay-btn {
   background-color: #ffd369;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .products-section .products .each-product .overlay-img:hover {
