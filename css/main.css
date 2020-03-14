@@ -46,6 +46,10 @@ body a:visited {
   width: 54px !important;
 }
 
+.contact-details .right .cart-container .remove-cart-item {
+  cursor: pointer;
+}
+
 .contact-details .right .cart-container.active {
   opacity: 1;
   z-index: 20;
