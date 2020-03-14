@@ -188,23 +188,16 @@ getProducts(function (err, data) {
             if (event.target.classList.contains('add-cart')) {
                 var productID = event.target.parentElement.parentElement.parentElement.id;
 
-                // filtering product from database for cart
-                // cartProducts.push(data.find(function (el) {
-                //     return el.id === parseInt(productID);
-                // }))
-
                 data.forEach(function (eachObj) {
                     if (eachObj.id === parseInt(productID)) {
                         console.log('hello')
                         eachObj.numberOfItem = 1;
                         cartProducts.push(eachObj);
                         handleCart(eachObj);
-
                     }
                 })
 
-                // invoking handlecart with array of products
-                handleCart(cartProducts);
+                console.log(cartProducts)
 
                 // calculating totoals
                 var totalcalc = calculateTotals(cartProducts)
@@ -218,20 +211,12 @@ getProducts(function (err, data) {
             }
         }
 
-        // add data to cart
+        // show data in cart
         function handleCart(eachProduct) {
             var cartItemsContainer = document.querySelector('.cart-container .cart-items');
             var itemToAdd = '<li class="list-group-item"><div class="item d-flex justify-content-between" id="%id%"><div class="item-img"><img src="img/%img-path%" alt="item-img" width="40"></div><div class="item-name text-left text-truncate">%item-name%</div><div class="item-price text-left text-muted">%item-price%</div><div class="each-item-numbers w-50"><select class="numberOfItems"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="5+">5+</option></select></div><img src="../img/icons/x-circle.svg" class="remove-cart-item"></div></li>';
 
             console.log(eachProduct)
-            // cartItemsContainer.innerHTML = '';
-            // cartData.forEach(function (eachData) {
-            //     var item = itemToAdd.replace('%id%', eachData.id);
-            //     item = item.replace('%img-path%', eachData.img);
-            //     item = item.replace('%item-name%', eachData.name);
-            //     item = item.replace('%item-price%', eachData.price);
-            //     cartItemsContainer.innerHTML += item;
-            // })
 
             var item = itemToAdd.replace('%id%', eachProduct.id);
             item = item.replace('%img-path%', eachProduct.img);
@@ -329,6 +314,22 @@ getProducts(function (err, data) {
             document.querySelector('.item-numbers').textContent = totals[0];
             document.querySelector('.price-numbers').textContent = totals[1];
         }
+
+        // search items
+        document.querySelector('.search').addEventListener('click', function (event) {
+            var searchValue = document.querySelector('#search-item').value.toLowerCase();
+            document.querySelector('#search-item').value = '';
+            if (searchValue !== '') {
+                var foundData = data.filter(function (el) {
+                    return el.name.toLowerCase().includes(searchValue);
+                })
+
+                if (foundData !== undefined) {
+                    showProducts(foundData)
+                }
+            }
+        })
+
     }
 
 });

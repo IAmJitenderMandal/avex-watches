@@ -39,7 +39,8 @@ body {
             top: 18px;
             opacity: 0;
             transition: 0.5s opacity;
-            
+            display: none;
+
             .each-item-numbers {
                 width: 54px !important;
             }
@@ -51,6 +52,7 @@ body {
             &.active {
                 opacity: 1;
                 z-index: 20;
+                display: block;
             }
         }
     }

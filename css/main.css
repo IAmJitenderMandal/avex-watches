@@ -40,6 +40,7 @@ body a:visited {
   opacity: 0;
   -webkit-transition: 0.5s opacity;
   transition: 0.5s opacity;
+  display: none;
 }
 
 .contact-details .right .cart-container .each-item-numbers {
@@ -53,6 +54,7 @@ body a:visited {
 .contact-details .right .cart-container.active {
   opacity: 1;
   z-index: 20;
+  display: block;
 }
 
 .navbar .logo {
